@@ -1,6 +1,4 @@
-//possible need to put onClick="window.location.reload()"
-//for refreshing the page on a mood click to correctly load new songs and videos
-
+//currently unused
 var moodVideo = [
   "Creative",
   "Bummed",
@@ -10,9 +8,8 @@ var moodVideo = [
   "Feeling Good"
 ];
 console.log("hello world");
-
+//currently unused ^^^^^
 function callVideo() {
-  // $("iframe").empty();
   var video = $(this).attr("data-name");
 
   var queryURL =
@@ -49,54 +46,3 @@ function callVideo() {
 $(document).ready(function() {
   $(document).on("click", ".dropdown-item", callVideo);
 });
-// console.log(dynamicVideoId);
-// var tag = document.createElement("script");
-
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName("script")[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// // 3. This function creates an <iframe> (and YouTube player)
-// //    after the API code downloads.
-// var player;
-
-// videoId = dynamicVideoId;
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player("player", {
-//     height: "390",
-//     width: "640",
-//     videoId: "qXUJSCZiU48",
-//     events: {
-//       onReady: onPlayerReady,
-//       onStateChange: onPlayerStateChange
-//     }
-//   });
-// }
-
-// // loadVideoById({
-// //   videoId: calledVideoId,
-// //   startSeconds: 5,
-// //   endSeconds: 60,
-// //   suggestedQuality: "large"
-// // });
-
-// // loadVideoById(calledVideoId, 5, "large");
-
-// function onPlayerReady(event) {
-//   event.target.playVideo();
-// }
-
-// var done = false;
-// function onPlayerStateChange(event) {
-//   if (event.data == YT.PlayerState.PLAYING && !done) {
-//     //if wanting to stop setTimeout
-//     // setTimeout(stopVideo, 6000);
-//     done = true;
-//   }
-// }
-// function stopVideo() {
-//   player.stopVideo();
-// }
-
-// $(document).on("click", ".dropdown-item", loadVideoById);
-// var calledVideoId = JSON.stringify(response.items[0].id.videoId);
